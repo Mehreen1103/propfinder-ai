@@ -1,0 +1,18 @@
+{
+  "name": "propfinder-ai",
+  "version": "1.0.0",
+  "private": true,
+  "description": "PropFinder AI: run both apps from the project root",
+  "scripts": {
+    "install:all": "npm install && npm --prefix server install && npm --prefix client install",
+    "dev": "concurrently -k -n api,web -c blue,green \"npm --prefix server run dev\" \"npm --prefix client run dev\"",
+    "test": "npm --prefix server test",
+    "build": "npm --prefix client run build"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "devDependencies": {
+    "concurrently": "^9.2.5"
+  }
+}

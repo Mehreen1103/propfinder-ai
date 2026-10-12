@@ -1,0 +1,20 @@
+# Render Blueprint for the backend (free plan).
+# Dashboard: New > Blueprint > pick this repo. Then set the two secrets below.
+services:
+  - type: web
+    name: propfinder-api
+    runtime: node
+    plan: free
+    rootDir: server
+    buildCommand: npm install
+    startCommand: npm start
+    healthCheckPath: /api/health
+    envVars:
+      - key: NODE_VERSION
+        value: 20
+      - key: GROQ_MODEL
+        value: llama-3.3-70b-versatile
+      - key: GROQ_API_KEY
+        sync: false # paste your key in the Render dashboard
+      - key: CLIENT_ORIGIN
+        sync: false # your Vercel URL, e.g. https://propfinder-ai.vercel.app
