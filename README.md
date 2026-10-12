@@ -118,11 +118,3 @@ hint when that happens.
 - Bedrooms is an exact match; features must all be present; location matches city or area (case-insensitive).
 - Suggested commit history: scaffold server, listings API, AI search graph, client scaffold, filters and chips,
   deploy config.
-
-## CV entry
-
-**PropFinder AI: Real Estate Search App** | React, Node.js, Express, LangChain, LangGraph, Groq API
-
-- Built a full-stack property search app with a React frontend and Express REST API, deployed on Vercel and Render.
-- Implemented natural-language search as a LangGraph pipeline (LLM extraction, zod validation, filtering) using
-  LangChain and Groq (Llama 3.3), with schema-validated output, rate limiting, and a graceful fallback on failure.
